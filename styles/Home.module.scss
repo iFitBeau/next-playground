@@ -4,7 +4,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 6rem;
-  min-height: 100vh;
 }
 
 .description {
@@ -260,6 +259,14 @@
   position: relative;
   width: 100%;
   padding-top: 34%;
+}
+
+.product_container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 /* Tablet and Smaller Desktop */

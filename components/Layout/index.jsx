@@ -1,13 +1,15 @@
 import Header from '../Header';
-import Footer from '../Footer'
-import styles from './styles.module.scss'
+import Footer from '../Footer';
+import SkipToMain from '../SkipToMain';
+import styles from './styles.module.scss';
 
 export default function Layout({something, children}) {
-console.log("Layout",something);
+
   return (
     <>
+      <SkipToMain />
       <Header />
-      <main className={styles.main}>{children}</main>
+      <main id="main" className={styles.main}>{children}</main>
       <Footer />
     </>
   )

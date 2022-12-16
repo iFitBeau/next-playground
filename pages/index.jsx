@@ -1,12 +1,15 @@
+import styles from '../styles/Home.module.scss'
+import { supabase } from '../utils/supabase';
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.scss'
+import ProductCard from '../components/ProductCard';
 
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({ products }) {
+
   return (
     <>
       <Head>
@@ -15,6 +18,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
       <section className={styles.section}>
         <h1>Homepage</h1>
         <div className={styles.imgcontainer}>
@@ -22,6 +26,26 @@ export default function Home() {
         </div>
       </section>
 
+      <section className={styles.product_container}>
+        
+        {products.length && 
+          products.map( (product, index) => (
+            <ProductCard key={index} {...product} />
+          ) )
+        }
+
+      </section>
+
     </>
   )
+}
+
+export const getStaticProps = async () => {
+  const { data: products } = await supabase.from('products').select('*');
+
+  return {
+    props: {
+      products,
+    }
+  }
 }

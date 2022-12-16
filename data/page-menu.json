@@ -22,5 +22,11 @@
     "slug": "page-3",
     "uri": "/i-know-what-you-did",
     "description": "Oh sure, save the best for last"
+  },
+  {
+    "title": "Blog",
+    "slug": "blog",
+    "uri": "/blog",
+    "description": "There would be blog posts here, if we had something to say..."
   }
 ]
