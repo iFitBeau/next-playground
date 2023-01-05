@@ -19,17 +19,15 @@ export default function Footer() {
           </a>
         </Link>
       </div>
-      <ul className={styles.MainFooter__menu}>
-        
-        { pageMenu.map((page, index) => (
-          <li key={index}>
-            <Link href={page.slug}>
-              {page.title}
-            </Link>
-          </li>
-        )) }
 
+      <ul className={styles.MainFooter__menu}>
+        <li>
+          <Link href="/about">
+            About
+          </Link>
+        </li>
       </ul>
+      
     </footer>  
   
   )

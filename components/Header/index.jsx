@@ -19,16 +19,13 @@ export default function Header() {
       </Link>
 
       <ul className={styles.MainHeader__menu}>
-
-        { pageMenu.map((page, index) => (
-          <li key={index}>
-            <Link href={page.slug}>
-              {page.title}
-            </Link>
-          </li>
-        )) }
-
+        <li>
+          <Link href="/about">
+            About
+          </Link>
+        </li>
       </ul>
+      
     </header>  
   
   )
