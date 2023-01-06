@@ -1,10 +1,12 @@
+import styles from './About.scss';
+
 
 export default function About() {
 
   return (
     <>
       <h1>This is the About Page</h1>
-      <article>
+      <article className='About'>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempus bibendum quam, sit amet tincidunt quam scelerisque et. Ut arcu enim, dapibus sed molestie id, euismod ut neque. Donec elementum a felis molestie ornare. Pellentesque ultricies ligula dolor, sit amet commodo nulla dictum id. Integer vitae accumsan massa. Pellentesque laoreet odio vitae ante accumsan viverra. Etiam suscipit ex eget erat eleifend gravida. Aliquam molestie iaculis sapien, vel consequat ex luctus eget. Maecenas mollis mauris ac lacus pulvinar semper. Aliquam fermentum interdum pretium. Morbi interdum consectetur tellus, eu faucibus diam porta nec. Nam maximus nibh in ipsum mollis, eget egestas ex pellentesque. Sed eget commodo augue. Praesent iaculis, lectus non aliquet rutrum, nulla risus venenatis nunc, eget dignissim lectus tortor a lectus.</p>
 
         <p>Proin tristique diam nec imperdiet laoreet. Aliquam erat volutpat. Aliquam nec accumsan lorem. Ut eget pulvinar massa, non volutpat mi. Nullam vel lobortis leo, a luctus nulla. Etiam sit amet velit quis lacus placerat fermentum ac at enim. Quisque ac ultricies nisl, et rutrum elit. Vivamus condimentum elit vitae nisi sagittis tempor. Fusce gravida velit dui. Morbi hendrerit maximus rhoncus. Proin blandit vehicula turpis eget lacinia. Nam dictum lectus ut gravida hendrerit. Donec in maximus lacus. Sed eget metus sit amet lacus dapibus semper in ac justo. Sed lacinia felis at justo tincidunt, vitae consectetur nisi pharetra.</p>
