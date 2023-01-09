@@ -1,16 +1,30 @@
 .Product {
   position: relative;
   display: flex;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
   width: 100%;
+  
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 
   > div {
-    width: 50%;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
   }
 
   &__copy {
     position: relative;
+    order: 1;
+
+    @media screen and (min-width: 768px) {
+      order: 0;
+    }
   }
   
   &__image {

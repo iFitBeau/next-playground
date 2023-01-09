@@ -12,15 +12,26 @@ export default function Home({ products }) {
         <meta name="description" content="You can't go out in public unless you look fly." />
       </Head>
       
-      <section className='section'>
-        <h1>Super Awesome eCommerce Store!  Buy our stuff!</h1>
-        <div className='imgcontainer'>
-          <Image src="https://iconfitness-res.cloudinary.com/image/upload/v1670952818/nordictrack.com/cdn/images/catalog/modules/12-06-22-slide_hero_lg-v2.jpg" alt="placeholder" fill />
+      <section id="hero" className='section section_hero'>
+        <h1>Super Awesome eCommerce Store! Buy our stuff!</h1>
+        <div className='hero_banner'>
+          <picture>
+            <source media='(min-width:768px)' srcSet='https://iconcdn-res.cloudinary.com/image/upload/v1671815826/nordictrack.com/cdn/images/catalog/modules/12-26-22-slide_hero_lg-v1.jpg'/>
+            <img src="https://iconcdn-res.cloudinary.com/image/upload/v1671815826/nordictrack.com/cdn/images/catalog/modules/12-26-22-slide_hero_sm-v1.jpg" alt="Hero image" />
+            <figcaption>
+              <h2>Super Mega Blowout Sale!</h2>
+              <a href="/about" >Learn More</a>
+            </figcaption>
+          </picture>
         </div>
       </section>
 
-      <section className='product_container'>
+      <section id="featured-products" className='featured_products'>
+        <h2>Featured Products</h2>
+
+        <p>Some of the products to make you super buff, smart, will get you that promotion, and a blue check on Instagram.  This is where all of the hotness is.  Get them before they're gone, because Stone Cold said so.</p>
         
+        <div className='product_container'>
         {products.length && 
           products.map( (product, index) => (
             <a href={`/product/${product.id}`} key={index} className='ProductCard'>
@@ -39,6 +50,7 @@ export default function Home({ products }) {
             </a>
           ) )
         }
+        </div>
 
       </section>
 

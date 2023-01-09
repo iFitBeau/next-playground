@@ -253,12 +253,35 @@
   width: 100%;
 }
 
-.imgcontainer {
+.hero_banner {
   margin: 2rem 0;
   display: block;
   position: relative;
   width: 100%;
-  padding-top: 34%;
+
+  img {
+    width: 100%;
+  }
+
+  figcaption {
+    top: auto;
+    bottom: 1rem;
+
+    a {
+      display: inline-block;
+      padding: .75rem 2.0rem;
+      background-color: magenta;
+      border-radius: 0.25rem;
+      font-weight: 700;
+
+      &::after {
+        content: '\203A';
+        display: inline-block;
+        padding-left: 0.5rem;
+        font-size: 18px;
+      }
+    }
+  }
 }
 
 .product_container {
@@ -267,6 +290,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  gap: 1rem;
+  padding: 1rem 0;
 }
 
 
@@ -276,10 +301,14 @@
   border-radius: 0.5rem;
   border: 1px solid white;
   padding: 0.5rem;
-  max-width: 400px;
+  max-width: 280px;
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  h3 {
+    padding-top: 0;
+  }
 }
 
 .ProductCard__image {

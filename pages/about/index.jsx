@@ -1,6 +1,3 @@
-import styles from './About.scss';
-
-
 export default function About() {
 
   return (

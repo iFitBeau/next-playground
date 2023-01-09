@@ -3,7 +3,6 @@ import { formatter } from "../../utils/ultilities";
 
 const Product = ({product}) => {
 
-  console.log(product);
   return(
     <>
       <section className='Product'>

@@ -77,6 +77,24 @@ p {
   padding-bottom: 1rem;
 }
 
+img,
+video {
+  display: block;
+}
+
+figure,
+picture {
+  position: relative;
+  overflow: hidden;
+
+  figcaption {
+    position: absolute;
+    z-index: 2;
+    top: 1rem;
+    left: 1rem;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -94,6 +112,18 @@ article {
   width: 100%;
 }
 
+section {
+  position: relative;
+  padding: 2rem 0;
+
+  h2 {
+    text-align: center;
+  }
+
+  &.section_hero {
+    padding: 0;
+  }
+}
 
 @media (prefers-color-scheme: dark) {
   html {
