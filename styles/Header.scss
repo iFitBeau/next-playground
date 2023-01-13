@@ -1,0 +1,161 @@
+#main-header {
+  box-sizing: border-box;
+  padding: 1.25rem .75rem;
+  border-bottom: 1px solid white;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  #logo {
+    
+  }
+
+  nav {
+
+    button.header-hamburger {
+      padding: 0;
+      height: 2.25rem;
+      width: 2.25rem;
+      background-color: transparent;
+      border: 0 none;
+      position: relative;
+      box-sizing: border-box;
+      line-height: 1;
+      color: #fff;
+
+      .hamburger-line,
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0.65rem;
+        left: 0.45rem;
+        right: 0.45rem;
+        height: 1px;
+        background-color: #fff;
+        z-index: 2;
+      }
+
+      &::after {
+        top: auto;
+        bottom: 0.5rem;
+        height: 1px;
+      }
+
+      .hamburger-line {
+        top:50%;
+        transform: translateY(50%);
+      }
+    }
+
+    ul {
+      position: fixed;
+      z-index: 500;
+      width: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3rem;
+      display: none;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: white;
+        opacity: 0;
+      }
+
+      > li {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+
+        a {
+          font-weight: 700;
+          color: black;
+        }
+      }
+
+      &.open {
+        display: flex;
+
+        &::before {
+          opacity: 0.9;
+        }
+
+        > li {
+
+          &.menu-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            
+            button {
+              box-sizing: border-box;
+              background-color: #000;
+              color: #fff;
+              aspect-ratio: 1 / 1;
+              border: 0px none;
+              height: 2rem;
+              width: 2rem;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+  @media screen and ( min-width: $screen-tablet ) {
+    nav {
+      display: flex;
+      align-items: center;
+
+      button {
+        display: none;
+      }
+
+      ul {
+        list-style: none;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap:1.45rem;
+
+        &.open {
+          display: inherit;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        > li {
+
+          a {
+            color: #fff;
+          
+          }
+        
+        }
+      }
+
+    }
+  }
+}

@@ -1,31 +1,15 @@
-# next-playground
-A playground for Next.Js 13 and testing out some features as well as exploring how to develop in this framework.
+# Supbase and Next.Js Training
 
-This project is a bare bones example of what can be done, using a general JSON file to hold and parse the data for dynamic pages, as well as hold it's content.
+## Overview
+This repo will be a progressive series on how to integrate the cloud based database, [Supabase](https://supabase.com/), to be integrated into a Next.Js application.
+
+After pulling down the repo, navigate to the directory of this project in a terminal and run the command `npm install` to gather the required files to run this project.
+
+To run this project locally, in the same terminal, use the command `npm run dev`.  A localhost instance will start at http://localhost:3000, and as you save your files, hot reloading will refresh the page automatically.
 
 ---
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started with Next.Js
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
+## Next.Js
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -34,8 +18,27 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Technology used as of Jan. 10, 2023
+- [SupaBase](https://supabase.com/)
+- [Next.Js](https://nextjs.org)
+- [React](https://reactjs.org/)
+- [SASS](https://sass-lang.com/guide)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+## Training Schedule
+- Jan 4th, 2023
+  - Jedd gave an introduction to Supabase
+    - How to create a Supabase instance
+    - How to create tables in Supabase
+    - How to call from a REST API endpoint using [Postman](https://www.postman.com/)
+
+- Jan 10, 2023
+  - Beau demonstrated building a general site with Supabase and Next.Js
+    - Basic download and configuration of Next.Js
+    - How to add and use SASS for styling
+    - How to integarte Supabase REST API to get data
+    - How to display data on homepage
+    - How to use data to create new, dynamic pages

@@ -1,0 +1,17 @@
+#main-footer {
+  box-sizing: border-box;
+  padding: 1.25rem .75rem;
+  border-top: 1px solid white;
+  margin-top: 1.75rem;
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    list-style: none;
+
+    > li {
+      line-height: 2.25rem;
+
+    }
+  }
+}

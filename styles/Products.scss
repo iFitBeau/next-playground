@@ -1,0 +1,35 @@
+.breadcrumbs {
+
+  ul {
+    list-style: none;
+
+    > li {
+      display: inline-block;
+      padding: 0 0.5rem 0 0.75rem;
+      position: relative;
+
+      a {
+        text-decoration: underline;
+        text-underline-offset: 0.25rem;
+      }
+
+      &::before {
+        content: '/';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &:first-child{ 
+        padding-left: 0;
+
+        &::before {
+          content: '';
+        }
+      }
+    }
+  }
+
+}
